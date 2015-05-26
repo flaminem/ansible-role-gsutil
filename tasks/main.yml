@@ -1,11 +1,11 @@
 ---
-- name: Ensure dependancies gsutil are installed for Debian OS family
+- name: Ensure dependencies gsutil are installed for Debian OS family
   apt: pkg=gcc,python-dev,python-setuptools,libffi-dev state=present
   when: ansible_os_family == "Debian"
   environment: gsutil_environment
   tags: ["packages","gsutil"]
 
-- name: Ensure dependancies gsutil are installed for RedHat OS family
+- name: Ensure dependencies gsutil are installed for RedHat OS family
   yum: name=gcc,openssl-devel,python-devel,python-setuptools,libffi-devel state=present
   when: ansible_os_family == "RedHat"
   environment: gsutil_environment
