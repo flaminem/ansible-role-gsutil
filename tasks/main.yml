@@ -22,7 +22,7 @@
   tags: ["packages","gsutil"]
 
 - name: Ensure gsutil is installed
-  pip: name=gsutil state=present version=3.42
+  pip: name=gsutil state=present version={{gsutil_version}}
   environment: gsutil_environment
   tags: ["packages","gsutil"]
 

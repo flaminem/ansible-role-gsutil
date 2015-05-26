@@ -1,3 +1,6 @@
 ---
 gsutil_environment: {}
 gsutil_users_config: []
+gsutil_version: 3.42
+
+
