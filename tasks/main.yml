@@ -28,7 +28,8 @@
 
 - name: Ensure .boto base is present for each user
   copy: src=boto dest="/home/{{item.user}}/.boto" owner="{{item.user}}" group="{{item.group|default(item.user)}}" mode=600 force=no
-  with_items: gsutil_users_config
+  with_items:
+    - "{{ gsutil_users_config }}"
   tags: ["configuration","gsutil"]
 
 - name: Ensure .boto is present for each user
